@@ -1,4 +1,21 @@
-List of variables in the tidy data dataset (focusing only on the mean and standard deviation)
+I loaded the following datasets into R for the analysis:
+- activity labels
+- features
+- subject_train/test
+- x_train/test
+_ y_train/test
+
+Data transformation involved:
+- Matched the data in the "X_train/test" to the corresponding variables in "features" that contain the words mean or std.
+- Matched the numbers in "y_train/test" to the activity names in "activity labels"
+- Merged the training datasets "y_train", "subject_train", "X_train" into "train_data"
+- Merged the test datasets "y_test", "subject_test", "X_test" into "test_data"
+- Merged the training and test datasets into "overall_data"
+- Aggregated the data by the average of each activity and each subject
+- Removed the aggregate of activity and subject as those have no meaning
+- Wrote the new dataset into the "tidy_data" txt file
+
+List of variables in the final dataset (focusing only on the mean and standard deviation)
 - activity
 - subject	tBodyAcc mean   X	
 - tBodyAcc mean   Y	
